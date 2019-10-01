@@ -1,0 +1,64 @@
+import dependencias.*
+import rodados.*
+test "deportes y cultura" {
+	//Deportes
+	var deportes = new Dependencia()
+	deportes.cantidadDeEmpleados(45)
+	
+	var cachito = new Corsa()
+	cachito.color(rojo)
+	deportes.agregarAFlota(cachito)
+	
+	var corsaAzul = new Corsa()
+	deportes.agregarAFlota(corsaAzul)
+	corsaAzul.color("Azul")
+	
+	var corsaVerde = new Corsa()
+	deportes.agregarAFlota(corsaVerde)
+	corsaVerde.color("Verde")
+	
+	var kwidtieneTanqueAdicional = new Kwid()
+	deportes.agregarAFlota(kwidtieneTanqueAdicional)
+	kwidtieneTanqueAdicional.tieneTanqueAdicional(true)
+	
+	var autoEspecial = new AutoEspecial()
+	deportes.agregarAFlota(autoEspecial)
+	autoEspecial.capacidad(5)
+	autoEspecial.color("beige")
+	autoEspecial.peso(1200)
+	autoEspecial.velocidadMaxima(160)
+	
+	assert.equals(25,deportes.capacidadFaltante())
+	assert.equals(6450,deportes.pesoTotalFlota())
+	
+	
+	// Cultura
+	var cultura = new Dependencia()
+	cultura.cantidadDeEmpleados(31)
+	cultura.agregarAFlota(cachito)
+	
+	var kwidCultural1 = new Kwid()
+	cultura.agregarAFlota(kwidCultural1)
+	var kwidCultural2 = new Kwid()
+	cultura.agregarAFlota(kwidCultural2)
+	
+	kwidCultural1.tieneTanqueAdicional(true)
+	kwidCultural2.tieneTanqueAdicional(true)
+	
+	var kwidCultural3 = new Kwid()
+	cultura.agregarAFlota(kwidCultural3)
+	cultura.agregarAFlota(trafic)
+	trafic.interior(interiorPopular)
+	trafic.motor(motorBataton)
+	
+	assert.equals(25,cultura.capacidadFaltante())
+	assert.equals(5,cultura.capacidadFaltante())
+	
+	
+	
+	
+	
+	
+	
+
+}
