@@ -1,10 +1,10 @@
 import pedidos.*
 import rodados.*
 test "etapa 2" {
-	var cachito = new Corsa()
+	const cachito = new Corsa()
 	cachito.color("rojo")
 	
-	var miPedido = new Pedido()
+	const miPedido = new Pedido()
 	miPedido.distancia(960)
 	miPedido.tiempoMaximo(8)
 	miPedido.coloresIncompatibles(#{"negro","azul"})

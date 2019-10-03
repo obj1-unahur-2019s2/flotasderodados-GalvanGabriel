@@ -47,7 +47,7 @@ test "deportes y cultura" {
 	
 	var kwidCultural3 = new Kwid()
 	cultura.agregarAFlota(kwidCultural3)
-	cultura.agregarAFlota(trafic)
+	
 	trafic.interior(interiorPopular)
 	trafic.motor(motorBataton)
 	
